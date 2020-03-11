@@ -33,6 +33,8 @@ public class HomePage {
     private WebElement signUpButton;
     @FindBy(xpath = "//span[@id='user-menu-description']")
     private WebElement myStuffButton;
+    @FindBy(xpath = "//a[@id='sign-out']")
+    private WebElement signOutButton;
 
 
     public void clickNoThanks() {
@@ -51,6 +53,11 @@ public class HomePage {
     public void clickSignUp() {
         waitMethods.waitForElement(signUpButton);
         signUpButton.click();
+    }
+
+    public void clickSignOut() {
+        waitMethods.waitForElement(signOutButton);
+        signOutButton.click();
     }
 
 
@@ -74,8 +81,9 @@ public class HomePage {
         return this.signInButton.getText();
     }
 
-    public void clickSignOut() {
-        seleniumUtils.clickAndChoose(signInButton, "Sign Out");
-    }
+//    public void clickSignOut() {
+//        waitMethods.isElementDisplayed(signInButton,10);
+//        seleniumUtils.clickAndChoose(signInButton, "Sign Out");
+//    }
 
 }

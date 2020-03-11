@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee031fc4-b63a-43ff-8c0a-50e00c245ce8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/LoginRegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/LoginRegisterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/SignInNewAccount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/SignInSavedCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/SignInSavedCredentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/SignInUserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/SignInUserCredentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/SignUpUserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/SignUpSignInUserCredentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/SeleniumDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/SeleniumDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/SeleniumUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/SeleniumUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/LoginRegisterData" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/LoginRegisterData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/SignUpSignInUserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/SignUpSignInUserCredentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/LoginRegisterPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/LoginRegisterPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tests/SignInSavedCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/SignInSavedCredentials.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tests/SignInUserCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/SignInUserCredentials.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tests/SignUpUserCredentials.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utils/SeleniumDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/SeleniumDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utils/SeleniumUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/SeleniumUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Tests/SignUpSignInUserCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/SignUpSignInUserCredentials.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

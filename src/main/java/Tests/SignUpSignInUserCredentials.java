@@ -31,20 +31,21 @@ public class SignUpSignInUserCredentials extends SeleniumDriver {
         this.loginRegisterPage = PageFactory.initElements(driver, LoginRegisterPage.class);
     }
 
-    @Test
+    @Test (priority = 1)
     public void testSignUpUserCredentials() {
         seleniumUtils.goToUrl("https://staging.groupon.com/");
         homePage.clickNoThanks();
         homePage.clickSignUp();
         loginRegisterPage.signUpUserCredentials(fullName,email,password);
-        //Assert.assertEquals(homePage.getTextOfMyStuffButton(), expectedSignedInButtonText);
+        Assert.assertEquals(homePage.getTextOfMyStuffButton(), expectedSignedInButtonText);
     }
 
     @Test (dependsOnMethods = "testSignUpUserCredentials")
     public void testSignInUserCredentials() {
+        homePage.clickSignIn();
         homePage.clickSignOut();
         homePage.clickSignIn();
         loginRegisterPage.signInKnownCredentials("clo01@groupon.com", "grouponn");
-        Assert.assertEquals(homePage.getTextOfSignInButton(), expectedSignedInButtonText);
+        //Assert.assertEquals(homePage.getTextOfSignInButton(), expectedSignedInButtonText);
     }
 }
