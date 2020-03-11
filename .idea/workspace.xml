@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee031fc4-b63a-43ff-8c0a-50e00c245ce8" name="Default Changelist" comment="" />
+    <list default="true" id="ee031fc4-b63a-43ff-8c0a-50e00c245ce8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/LoginRegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/LoginRegisterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/SignInNewAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/SignInSavedCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/SignInSavedCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/SignInUserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/SignInUserCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/SignUpUserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/SignUpSignInUserCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/SeleniumDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/SeleniumDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/SeleniumUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/SeleniumUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/LoginRegisterData" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/LoginRegisterData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pages/LoginRegisterPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/LoginRegisterPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Tests/SignInSavedCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/SignInSavedCredentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Tests/SignInUserCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/SignInUserCredentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Tests/SignUpUserCredentials.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/SeleniumDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/SeleniumDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/SeleniumUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/SeleniumUtils.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +35,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -23,7 +46,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1YhqwQ1xyrBGDhtGmmSEl7wiZAR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/chromedriver" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -49,7 +74,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.SignUpUserCredentials">
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tests.Main" />
+      <module name="AutomationAssessmentProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignInSavedCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationAssessmentProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SignInSavedCredentials" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SignInUserCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationAssessmentProject" />
       <extension name="coverage">
@@ -67,7 +122,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignUpUserCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SignUpSignInUserCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutomationAssessmentProject" />
       <extension name="coverage">
         <pattern>
@@ -76,7 +131,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.SignUpUserCredentials" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SignUpSignInUserCredentials" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -86,8 +141,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SignUpUserCredentials" />
+        <item itemvalue="TestNG.SignUpSignInUserCredentials" />
         <item itemvalue="TestNG.SignInUserCredentials" />
+        <item itemvalue="TestNG.SignInSavedCredentials" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -103,5 +160,18 @@
       <updated>1583405411374</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

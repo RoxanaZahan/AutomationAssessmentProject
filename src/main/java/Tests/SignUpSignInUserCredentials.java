@@ -5,17 +5,25 @@ import Pages.LoginRegisterPage;
 import Utils.SeleniumDriver;
 import Utils.SeleniumUtils;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class SignInNewAccount extends SeleniumDriver {
+public class SignUpSignInUserCredentials extends SeleniumDriver {
 
     HomePage homePage;
     LoginRegisterPage loginRegisterPage;
     SeleniumUtils seleniumUtils = new SeleniumUtils();
+    String fullName = "John Doe";
     String email;
-    String password;
+    String password = "qaqaqaqa";
     String expectedSignedInButtonText = "My Stuff";
+
+    @BeforeTest
+    public void updateEmail() {
+        this.email = seleniumUtils.getRandomString() + "@groupon.com";
+    }
 
     @BeforeMethod
     public void beforeTest() {
@@ -23,12 +31,20 @@ public class SignInNewAccount extends SeleniumDriver {
         this.loginRegisterPage = PageFactory.initElements(driver, LoginRegisterPage.class);
     }
 
-    @Test (priority = 1)
-    public void testSignInUserCredentials() {
+    @Test
+    public void testSignUpUserCredentials() {
         seleniumUtils.goToUrl("https://staging.groupon.com/");
         homePage.clickNoThanks();
+        homePage.clickSignUp();
+        loginRegisterPage.signUpUserCredentials(fullName,email,password);
+        //Assert.assertEquals(homePage.getTextOfMyStuffButton(), expectedSignedInButtonText);
+    }
+
+    @Test (dependsOnMethods = "testSignUpUserCredentials")
+    public void testSignInUserCredentials() {
+        homePage.clickSignOut();
         homePage.clickSignIn();
         loginRegisterPage.signInKnownCredentials("clo01@groupon.com", "grouponn");
-
+        Assert.assertEquals(homePage.getTextOfSignInButton(), expectedSignedInButtonText);
     }
 }

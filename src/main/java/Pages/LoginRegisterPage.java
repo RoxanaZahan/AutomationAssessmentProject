@@ -1,11 +1,13 @@
 package Pages;
 
+import Utils.SeleniumUtils;
 import Utils.WaitMethods;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginRegisterPage {
     WaitMethods waitMethods = new WaitMethods();
+    SeleniumUtils seleniumUtils = new SeleniumUtils();
     //HomePage homePage = new HomePage();
 
     @FindBy(xpath = "//input[@id='sf-email']")
@@ -33,7 +35,11 @@ public class LoginRegisterPage {
     }
 
     public void signInSavedCredentials() {
-
+        final WebElement enterEmail = this.waitMethods.waitForElementToBeVisible(this.signInEmailField);
+        enterEmail.sendKeys(seleniumUtils.getvalue("email"));
+        final WebElement enterPassword = this.waitMethods.waitForElementToBeVisible(this.signInPasswordField);
+        enterPassword.sendKeys(seleniumUtils.getvalue("password"));
+        this.signInButton.click();
     }
 
     public void signUpUserCredentials(String fullName, String email, String password) {

@@ -58,17 +58,26 @@ public class SeleniumUtils extends SeleniumDriver {
         dropdown1.selectByVisibleText(filter);
     }
 
-    //Read txt file line by line
-    public String readTxtFile() {
+    //Read txt file line by line and search for the given key word
+    public String searchInTxtFile(String string) {
         String text = "";
-        try (Scanner scanner = new Scanner(Paths.get(""))) {
+        try (Scanner scanner = new Scanner(Paths.get("/Users/roxana.zahan/AutomationProject/AutomationAssessmentProject/src/test/LoginRegisterData"))) {
             while(scanner.hasNextLine()) {
                 String row = scanner.nextLine();
-                text = text + row;
+                text = row;
+                if (text.contains(string)) {
+                    break;
+                }
             }
         } catch (Exception e) {
         }
         return text;
+    }
+
+    public String getvalue(String key) {
+        String text = searchInTxtFile(key);
+        String[] array = text.split(": ");
+        return array[1];
     }
 
     public String getRandomString() {

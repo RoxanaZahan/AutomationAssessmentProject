@@ -23,7 +23,7 @@ public class HomePage {
     private List<WebElement> navBarCategories;
     @FindBy(xpath = "//div[@class='categories-column']/div[@id]") //Categories listed in Categories page
     private List<WebElement> categoriesChannels;
-    @FindBy(xpath = "//div[contains(@id,'signin-container')]")
+    @FindBy(xpath = "//div[@id='signin-container']")
     private WebElement signInButton;
     @FindBy(xpath = "//header[@id='ls-header']")
     private WebElement header;
@@ -31,6 +31,8 @@ public class HomePage {
     private WebElement cardsFeed;
     @FindBy (xpath = "//a[@data-bhw='UserSignUp']")
     private WebElement signUpButton;
+    @FindBy(xpath = "//span[@id='user-menu-description']")
+    private WebElement myStuffButton;
 
 
     public void clickNoThanks() {
@@ -62,9 +64,18 @@ public class HomePage {
         seleniumUtils.clickAndChoose(categories, categoryName);
     }
 
+    public String getTextOfMyStuffButton() {
+        waitMethods.isElementDisplayed(myStuffButton,10);
+        return this.myStuffButton.getText();
+    }
+
     public String getTextOfSignInButton() {
         waitMethods.isElementDisplayed(signInButton,10);
         return this.signInButton.getText();
+    }
+
+    public void clickSignOut() {
+        seleniumUtils.clickAndChoose(signInButton, "Sign Out");
     }
 
 }

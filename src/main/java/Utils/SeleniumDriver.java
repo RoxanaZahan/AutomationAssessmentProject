@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -13,7 +15,7 @@ import java.util.Set;
 public class SeleniumDriver {
     public static WebDriver driver;
 
-    @BeforeMethod
+    @BeforeTest
     public static void initialiseDriver() {
         String path = System.getProperty("user.dir");
         //System.out.println(path); //use it if unsure of your local path
@@ -24,7 +26,7 @@ public class SeleniumDriver {
         driver = new ChromeDriver();
     }
 
-    @AfterMethod
+    @AfterTest
     public static void afterMethod() {
         WaitMethods.sleep(3);
         driver.quit();
