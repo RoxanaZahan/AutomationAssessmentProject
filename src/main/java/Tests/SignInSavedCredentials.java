@@ -4,6 +4,7 @@ import Pages.HomePage;
 import Pages.LoginRegisterPage;
 import Utils.SeleniumDriver;
 import Utils.SeleniumUtils;
+import Utils.TestingURLS;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -24,7 +25,7 @@ public class SignInSavedCredentials extends SeleniumDriver {
 
     @Test
     public void testSignInUserCredentials() {
-        seleniumUtils.goToUrl("https://staging.groupon.com/");
+        seleniumUtils.goToUrl(TestingURLS.GROUPON_STAGING.getUrl());
         homePage.clickNoThanks();
         homePage.clickSignIn();
         loginRegisterPage.signInSavedCredentials(); //sign in with credentials stored in a txt file

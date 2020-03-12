@@ -4,6 +4,7 @@ import Pages.HomePage;
 import Pages.LoginRegisterPage;
 import Utils.SeleniumDriver;
 import Utils.SeleniumUtils;
+import Utils.TestingURLS;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -33,7 +34,7 @@ public class SignUpSignInUserCredentials extends SeleniumDriver {
 
     @Test (priority = 1)
     public void testSignUpUserCredentials() {
-        seleniumUtils.goToUrl("https://staging.groupon.com/");
+        seleniumUtils.goToUrl(TestingURLS.GROUPON_STAGING.getUrl());
         homePage.clickNoThanks();
         homePage.clickSignUp();
         loginRegisterPage.signUpUserCredentials(fullName,email,password);
