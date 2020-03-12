@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 public class LoginRegisterPage {
     WaitMethods waitMethods = new WaitMethods();
     SeleniumUtils seleniumUtils = new SeleniumUtils();
-    //HomePage homePage = new HomePage();
 
     @FindBy(xpath = "//input[@id='sf-email']")
     private WebElement signInEmailField;
@@ -26,7 +25,6 @@ public class LoginRegisterPage {
     private WebElement signUpButton;
 
     public void signInKnownCredentials(final String email, final String password) {
-        //homePage.clickSignIn();
         final WebElement enterEmail = this.waitMethods.waitForElementToBeVisible(this.signInEmailField);
         enterEmail.sendKeys(email);
         final WebElement enterPassword = this.waitMethods.waitForElementToBeVisible(this.signInPasswordField);

@@ -37,7 +37,7 @@ public class SignUpSignInUserCredentials extends SeleniumDriver {
         homePage.clickNoThanks();
         homePage.clickSignUp();
         loginRegisterPage.signUpUserCredentials(fullName,email,password);
-        Assert.assertEquals(homePage.getTextOfMyStuffButton(), expectedSignedInButtonText);
+        Assert.assertEquals(homePage.getTextOfSignInButton(), expectedSignedInButtonText);
     }
 
     @Test (dependsOnMethods = "testSignUpUserCredentials")
@@ -45,7 +45,7 @@ public class SignUpSignInUserCredentials extends SeleniumDriver {
         homePage.clickSignIn();
         homePage.clickSignOut();
         homePage.clickSignIn();
-        loginRegisterPage.signInKnownCredentials("clo01@groupon.com", "grouponn");
-        //Assert.assertEquals(homePage.getTextOfSignInButton(), expectedSignedInButtonText);
+        loginRegisterPage.signInKnownCredentials(this.email, this.password);
+        Assert.assertEquals(homePage.getTextOfMyStuffButton(), expectedSignedInButtonText);
     }
 }

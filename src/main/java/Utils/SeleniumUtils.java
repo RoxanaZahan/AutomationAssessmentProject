@@ -3,15 +3,11 @@ package Utils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
 public class SeleniumUtils extends SeleniumDriver {
     WaitMethods waitMethods = new WaitMethods();
-    //WebElement testDropDown = driver.findElement(By.id("testingDropdown"));
-
 
     public void goToUrl(final String host) {
         driver.get(host);
@@ -25,7 +21,6 @@ public class SeleniumUtils extends SeleniumDriver {
     public void switchToNewTab() {
         openNewTab();
         String subWindowHandler = null;
-
         Set<String> handles = driver.getWindowHandles();
         Iterator<String> iterator = handles.iterator();
         while (iterator.hasNext()) {

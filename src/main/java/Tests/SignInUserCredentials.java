@@ -22,7 +22,7 @@ public class SignInUserCredentials extends SeleniumDriver {
         this.loginRegisterPage = PageFactory.initElements(driver, LoginRegisterPage.class);
     }
 
-    @Test (priority = 2)
+    @Test
     public void testSignInUserCredentials() {
         seleniumUtils.goToUrl("https://staging.groupon.com/");
         homePage.clickNoThanks();

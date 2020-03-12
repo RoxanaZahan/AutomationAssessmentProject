@@ -45,9 +45,7 @@ public class HomePage {
     }
     public void clickSignIn() {
         waitMethods.waitForElement(signInButton);
-        //waitMethods.waitForElementToBeClickable(signInButton);
         signInButton.click();
-        //seleniumUtils.click(signInButton);
     }
 
     public void clickSignUp() {
@@ -59,7 +57,6 @@ public class HomePage {
         waitMethods.waitForElement(signOutButton);
         signOutButton.click();
     }
-
 
     public void freeTextSearch(String text) {
         seleniumUtils.click(searchTab);
@@ -80,10 +77,5 @@ public class HomePage {
         waitMethods.isElementDisplayed(signInButton,10);
         return this.signInButton.getText();
     }
-
-//    public void clickSignOut() {
-//        waitMethods.isElementDisplayed(signInButton,10);
-//        seleniumUtils.clickAndChoose(signInButton, "Sign Out");
-//    }
 
 }
