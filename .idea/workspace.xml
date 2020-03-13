@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee031fc4-b63a-43ff-8c0a-50e00c245ce8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/TestingURLS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/CategoriesPackage/Categories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/CategoriesPackage/Local.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/HeadersPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClasses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/SignInSavedCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/SignInSavedCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Tests/SignInUserCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/SignInUserCredentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Tests/SignUpSignInUserCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/SignUpSignInUserCredentials.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.SignInSavedCredentials">
+  <component name="RunManager" selected="TestNG.TestClasses">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Tests.Main" />
       <module name="AutomationAssessmentProject" />
@@ -124,8 +130,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestClasses" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutomationAssessmentProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TestClasses" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestClasses" />
         <item itemvalue="TestNG.SignInSavedCredentials" />
         <item itemvalue="TestNG.SignUpSignInUserCredentials" />
         <item itemvalue="TestNG.SignInUserCredentials" />
@@ -158,5 +182,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/Pages/CategoriesPackage/Categories.java</url>
+          <line>20</line>
+          <properties class="Pages.CategoriesPackage.Categories" method="getCategoryElement">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

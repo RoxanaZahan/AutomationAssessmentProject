@@ -25,8 +25,6 @@ public class HomePage {
     private List<WebElement> categoriesChannels;
     @FindBy(xpath = "//div[@id='signin-container']")
     private WebElement signInButton;
-    @FindBy(xpath = "//header[@id='ls-header']")
-    private WebElement header;
     @FindBy(xpath = "//div[@id='main-feed']")
     private WebElement cardsFeed;
     @FindBy (xpath = "//a[@data-bhw='UserSignUp']")
