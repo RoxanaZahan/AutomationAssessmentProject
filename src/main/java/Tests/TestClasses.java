@@ -29,9 +29,11 @@ public class TestClasses extends SeleniumDriver{
         }
 
         @Test
-        public void testSignInUserCredentials() {
-            seleniumUtils.goToUrl(TestingURLS.GROUPON_STAGING.getUrl());
+        public void testSomething() {
+            seleniumUtils.goToUrl(TestingURLS.GROUPON_PROD.getUrl());
             homePage.clickNoThanks();
-            categories.chooseAnClickCategoryAndSubCategory("Local", "Automotive");
+            categories.clickCategoriesButton();
+            categories.clickLocal();
+
         }
 }

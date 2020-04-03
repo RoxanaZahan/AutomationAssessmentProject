@@ -2,41 +2,29 @@ package Pages.CategoriesPackage;
 
 import Utils.SeleniumUtils;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class Categories {
-    HashMap<String, List<String>> categoriesSubcategories;
-    Local local;
-    SeleniumUtils seleniumUtils = new SeleniumUtils();
+    @FindBy(xpath = "//div[@id='btn-categories']")
+    private WebElement categoriesWebElement;
+    @FindBy(xpath = "//div[@id='local']")
+    private WebElement localWebElement;
+
+    private Local local = new Local();
+    private SeleniumUtils seleniumUtils = new SeleniumUtils();
 
     public Categories() {
-        this.categoriesSubcategories = new HashMap<String, List<String>>();
-        local = new Local();
-        this.categoriesSubcategories.put("Local", local.getLocalSubcategoriesList());
+        //this.local = new Local();
     }
 
-    public WebElement getCategoryElement(String category, String subCategory) {
-        WebElement element = null;
-        for (Map.Entry<String, List<String>> entry : this.categoriesSubcategories.entrySet()) {
-            if(entry.getKey() == category) {
-                for(String subCat : entry.getValue()) {
-                    if(subCat == subCategory) {
-                        for (int i = 0; i<local.getLocalSubcategoriesElementsList().size(); i++) {
-                            if (local.getLocalSubcategoriesElementsList().get(i).getText().contains(subCategory)) {
-                                element = local.getLocalSubcategoriesElementsList().get(i);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return element;
+    public void clickCategoriesButton() {
+        seleniumUtils.click(categoriesWebElement);
     }
 
-    public void chooseAnClickCategoryAndSubCategory(String category, String subCategory) {
-        seleniumUtils.click(getCategoryElement(category,subCategory));
+    public Local clickLocal() {
+        seleniumUtils.click(localWebElement);
+        return this.local;
     }
+
 }

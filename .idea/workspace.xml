@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee031fc4-b63a-43ff-8c0a-50e00c245ce8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/CategoriesPackage/Categories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/CategoriesPackage/Local.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/HeadersPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClasses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tests/SignInUserCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/SignInUserCredentials.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Tests/SignUpSignInUserCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/SignUpSignInUserCredentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/CategoriesPackage/Categories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/CategoriesPackage/Categories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/CategoriesPackage/Local.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/CategoriesPackage/Local.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Tests/TestClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tests/TestClasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/TestingURLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/TestingURLS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pages/CategoriesPackage/Categories.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/CategoriesPackage/Categories.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pages/CategoriesPackage/Local.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/CategoriesPackage/Local.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Tests/TestClasses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Tests/TestClasses.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/TestingURLS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/TestingURLS.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,10 +46,10 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/chromedriver" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/chromedriver" />
     </key>
   </component>
@@ -186,13 +186,18 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Tests/TestClasses.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/Pages/CategoriesPackage/Categories.java</url>
           <line>20</line>
-          <properties class="Pages.CategoriesPackage.Categories" method="getCategoryElement">
+          <properties class="Pages.CategoriesPackage.Categories" method="clickCategoriesButton">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

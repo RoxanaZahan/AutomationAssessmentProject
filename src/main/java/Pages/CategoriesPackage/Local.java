@@ -1,11 +1,14 @@
 package Pages.CategoriesPackage;
 
+import Utils.SeleniumUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.*;
 
 public class Local {
+    SeleniumUtils seleniumUtils = new SeleniumUtils();
+
     private String automotive = "Automotive";
     private String beautySpa = "Beauty & Spa";
     private String foodDrink = "Food & Drink";
@@ -43,6 +46,7 @@ public class Local {
 
     private List<String> localSubcategoriesList;
     private List<WebElement> localSubcategoriesElementsList;
+    private HashMap<String, WebElement> localSubCategMap;
 
     public Local() {
         this.localSubcategoriesList = new ArrayList<String>();
@@ -71,6 +75,12 @@ public class Local {
         localSubcategoriesElementsList.add(retailCat);
         localSubcategoriesElementsList.add(thingsToDoCat);
 
+        this.localSubCategMap = new HashMap<>();
+        for(int i = 0; i < localSubcategoriesList.size(); i++) {
+            for(int e = 0; e < localSubcategoriesElementsList.size(); e++) {
+                localSubCategMap.put(localSubcategoriesList.get(i), localSubcategoriesElementsList.get(e));
+            }
+        }
     }
 
     public List<WebElement> getLocalSubcategoriesElementsList() {
@@ -123,6 +133,14 @@ public class Local {
 
     public String getThingsToDo() {
         return thingsToDo;
+    }
+
+    public void clickSubCategory(String subCategory) {
+        for(Map.Entry<String,WebElement> entry : localSubCategMap.entrySet()) {
+            if(subCategory.equals(entry.getKey())) {
+                seleniumUtils.click(entry.getValue());
+            }
+        }
     }
 
 }
