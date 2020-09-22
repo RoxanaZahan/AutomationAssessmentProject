@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name = "Timeout test suite">
+    <test name = "Timeout test" time-out="5000">
+        <classes>
+            <class name="Tests.Search.GoodsSearch"/>
+        </classes>
+    </test>
+</suite>
