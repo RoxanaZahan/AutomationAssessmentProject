@@ -7,10 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
-import java.util.NoSuchElementException;
-
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class WaitMethods extends SeleniumDriver{
@@ -24,26 +21,18 @@ public class WaitMethods extends SeleniumDriver{
         }
     }
 
-    public WebElement waitForElementToBeClickable(final WebElement element) {
-        final Wait<WebDriver> wait = new FluentWait<>(SeleniumDriver.driver)
-                .withTimeout(Duration.ofSeconds(20))
-                .pollingEvery(Duration.ofMillis(500))
-                .ignoring(java.util.NoSuchElementException.class);
-        return wait.until(ExpectedConditions.elementToBeClickable(element));
-    }
-
     public void waitForElementToBeClickableByPath() {
         final WebElement ha = driver.findElement(By.xpath("//button[@id='buttonwithclass']"));
         ha.click();
     }
 
 
-    public WebElement waitForElementToBeVisible(final WebElement element) {
+    public WebElement waitForElementToBeClickable(final WebElement element) {
         final Wait<WebDriver> wait = new FluentWait<>(SeleniumDriver.driver)
                 .withTimeout(Duration.ofSeconds(20))
-                .pollingEvery(Duration.ofMillis(500))
-                .ignoring(NoSuchElementException.class);
-        return wait.until(ExpectedConditions.visibilityOf(element));
+                .pollingEvery(Duration.ofMillis(1000))
+                .ignoring(Exception.class);
+        return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public boolean isElementDisplayed(final WebElement element, final int timeout) {
@@ -59,8 +48,36 @@ public class WaitMethods extends SeleniumDriver{
         return false;
     }
 
-    public WebElement waitForElement(final WebElement WebElement) {
+    public WebElement waitForElement(final WebElement webElement) {
         final WebDriverWait wait = new WebDriverWait(driver, 10);
-        return wait.until(ExpectedConditions.visibilityOf(WebElement));
+        return wait.until(ExpectedConditions.visibilityOf(webElement));
     }
+
+    public boolean isTextOfElementVisible(final WebElement webElement, String expectedText ) {
+        final WebDriverWait wait = new WebDriverWait(driver, 10);
+        return wait.until(ExpectedConditions.visibilityOf(webElement)).getText().contains(expectedText);
+    }
+
+    public WebElement waitInAWhileLoop(WebElement element){
+        final WebDriverWait wait = new WebDriverWait(driver, 20);
+        WebElement myStuffElement =  wait.until(ExpectedConditions.visibilityOf(element));
+        int safetyMeasure = 30;
+        while(true){
+                try{
+                    if(!myStuffElement.getText().contains("My Stuff")){
+                        try {
+                            myStuffElement = wait.until(ExpectedConditions.visibilityOf(element));
+                        }catch (Exception ignored){}
+                }  else {
+                        break;
+                    }
+                }catch (Exception ignored){}
+                safetyMeasure--;
+                if(safetyMeasure == 0){
+                    break;
+                }
+            }
+        return myStuffElement;
+    }
+
 }

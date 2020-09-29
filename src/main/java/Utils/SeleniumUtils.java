@@ -1,7 +1,9 @@
 package Utils;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import java.nio.file.Paths;
 import java.util.*;
@@ -12,6 +14,16 @@ public class SeleniumUtils extends SeleniumDriver {
     public void goToUrl(final String host) {
         driver.get(host);
         driver.manage().window().maximize();
+        try{
+            WebElement noTx = driver.findElement(By.xpath("//*[@id='nothx']"));
+            if(waitMethods.isElementDisplayed(noTx, 5)) {
+                noTx.click();
+            }
+        }
+        catch (Exception e){
+
+        }
+
     }
 
     public void openNewTab() {
@@ -29,15 +41,20 @@ public class SeleniumUtils extends SeleniumDriver {
         driver.switchTo().window(subWindowHandler);
     }
 
-    //for simple WebElement click
+    //for simple WebElement click - waits for element to be clickable and the clicks on it
     public void  click(WebElement webElement) {
-        waitMethods.waitForElementToBeVisible(webElement);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        waitMethods.waitForElementToBeClickable(webElement);
         webElement.click();
     }
 
     //for WebElements that require a child choice - as filters.
     public void clickAndChoose(WebElement parentFilter, List<WebElement> webElementsList, String childFilterId) {
-        waitMethods.waitForElementToBeVisible(parentFilter);
+        waitMethods.waitForElementToBeClickable(parentFilter);
         parentFilter.click();
         for (WebElement filter : webElementsList) {
             if (filter.getAttribute("id").contains(childFilterId)) {
@@ -81,4 +98,11 @@ public class SeleniumUtils extends SeleniumDriver {
         char c = (char) (random.nextInt(26) + 'a');
         return Character.toString(c)+Character.toString(c)+Integer.toString(randomNumber);
     }
+
+    public void clickElementViaActions(WebElement element){
+        waitMethods.waitForElementToBeClickable(element);
+        Actions actions = new Actions(driver);
+        actions.click(element).perform();
+    }
+
 }
